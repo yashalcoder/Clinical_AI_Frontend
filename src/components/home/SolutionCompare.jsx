@@ -45,14 +45,14 @@ export default function SolutionCompare() {
         </div>
 
         {/* Side-by-side Comparison */}
-        <div className="flex flex-col lg:flex-row items-center gap-8 justify-between">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 md:gap-8 items-center">
           {/* Left panel: Old way */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="w-full lg:w-[45%] border-2 border-dashed border-brand-error/20 bg-brand-error/[0.02] rounded-2xl p-6 md:p-8"
+            className="lg:col-span-2 border-2 border-dashed border-brand-error/20 bg-brand-error/[0.02] rounded-2xl p-6 md:p-8"
           >
             <span className="text-xs font-bold text-brand-error uppercase tracking-widest font-poppins block mb-6">
               Today · 8+ Disconnected Tools
@@ -75,9 +75,9 @@ export default function SolutionCompare() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="h-12 w-12 bg-brand-primary text-brand-accent rounded-full flex items-center justify-center shrink-0 shadow-md border border-brand-accent/20"
+            className="hidden lg:flex h-12 w-12 bg-brand-primary text-brand-accent rounded-full items-center justify-center shrink-0 shadow-md border border-brand-accent/20 mx-auto"
           >
-            <ArrowRight size={20} className="rotate-90 lg:rotate-0" />
+            <ArrowRight size={20} />
           </motion.div>
 
           {/* Right panel: ClinicFlow AI */}
@@ -86,7 +86,7 @@ export default function SolutionCompare() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="w-full lg:w-[45%] bg-brand-primary text-white rounded-2xl p-6 md:p-8 shadow-xl border border-brand-accent/20"
+            className="lg:col-span-2 bg-brand-primary text-white rounded-2xl p-6 md:p-8 shadow-xl border border-brand-accent/20"
           >
             <span className="text-xs font-bold text-brand-accent uppercase tracking-widest font-poppins block mb-6">
               With ClinicFlow AI · 1 Platform
