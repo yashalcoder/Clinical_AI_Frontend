@@ -23,7 +23,7 @@ import { Loader } from "@/components/common/Loader";
 // Lazy load the heavy multi-step booking form
 const BookAppointmentForm = React.lazy(() => import("@/components/patient/BookAppointmentForm"));
 
-export default function Appointments() {
+function AppointmentsContent() {
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState("upcoming");
   const [appointments, setAppointments] = useState([]);
@@ -333,5 +333,13 @@ export default function Appointments() {
         )}
       </Modal>
     </div>
+  );
+}
+
+export default function Appointments() {
+  return (
+    <Suspense fallback={<TableSkeleton />}>
+      <AppointmentsContent />
+    </Suspense>
   );
 }
