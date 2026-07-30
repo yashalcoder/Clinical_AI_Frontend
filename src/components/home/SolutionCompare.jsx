@@ -102,6 +102,7 @@ export default function SolutionCompare() {
               ))}
             </ul>
           </motion.div>
+        </div>
       </Container>
     </section>
   );
