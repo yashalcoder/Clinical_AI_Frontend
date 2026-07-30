@@ -26,8 +26,8 @@ export default function SolutionCompare() {
   ];
 
   return (
-    <section className="bg-white py-16 md:py-24 border-b border-brand-bg-light">
-      <Container className="space-y-12 md:space-y-16">
+    <section className="bg-white py-20 md:py-28 border-b border-brand-bg-light">
+      <Container className="space-y-16 md:space-y-20">
         {/* Header */}
         <div className="max-w-3xl space-y-4">
           <span className="text-xs font-semibold text-brand-accent tracking-wider uppercase font-poppins block">

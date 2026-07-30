@@ -22,14 +22,14 @@ export default function Pitch() {
   };
 
   return (
-    <section className="bg-white py-16 md:py-24 border-b border-brand-bg-light" id="features">
+    <section className="bg-white py-20 md:py-28 border-b border-brand-bg-light" id="features">
       <Container>
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="space-y-12 md:space-y-16"
+          className="space-y-16 md:space-y-20"
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="max-w-3xl space-y-4">
